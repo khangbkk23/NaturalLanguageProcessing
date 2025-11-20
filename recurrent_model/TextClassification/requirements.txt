@@ -1,0 +1,18 @@
+# Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Data Manipulation & Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Natural Language Processing (NLP)
+nltk>=3.8.1
+beautifulsoup4>=4.12.0
+
+# Visualization (Vẽ biểu đồ so sánh)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilities (Hỗ trợ thanh tiến trình - optional nhưng khuyến nghị)
+tqdm>=4.65.0
