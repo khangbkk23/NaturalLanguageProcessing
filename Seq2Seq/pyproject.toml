@@ -2,29 +2,30 @@
 name = "seq2seq-translation-assignment"
 version = "0.1.0"
 description = "Machine Translation Seq2Seq Implementation for Home Exercise 1"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Bui Tran Duy Khang <dikhang@example.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13" 
-# Lưu ý: Numpy 2.0 yêu cầu Python mới hơn, nới lỏng >= 3.10 để an toàn
+python = ">=3.10,<3.13"
+# Cho phép Poetry tự chọn numpy 1.x hoặc 2.x để tránh xung đột với Thinc/Spacy
+numpy = "^1.26.0 || ^2.0.0"
 
-# Cho phép Poetry tự chọn numpy 1.x hoặc 2.x tùy theo dependency của Spacy
-numpy = "^1.26.0 || ^2.0.0" 
-
-# Spacy mới nhất sẽ kéo theo Thinc mới nhất (yêu cầu Numpy 2.0)
+# Spacy và model ngôn ngữ
 spacy = "^3.7.4"
 
+# Thư viện đọc config file .yml
+PyYAML = "^6.0"
+
+# Data Science & Vis
 matplotlib = "^3.8.0"
 jupyter = "^1.0.0"
 notebook = "^7.0.0"
 tqdm = "^4.66.0"
 
-# Cấu hình PyTorch tiêu chuẩn
+# PyTorch
 torch = "^2.2.0"
 
-# Nếu bạn dùng bản torch mới, torchtext có thể gây lỗi version, 
-# nên dùng sacrebleu thay thế như đã bàn
+# Đánh giá mô hình (thay thế torchtext)
 sacrebleu = "^2.4.0"
 
 [tool.poetry.group.dev.dependencies]
